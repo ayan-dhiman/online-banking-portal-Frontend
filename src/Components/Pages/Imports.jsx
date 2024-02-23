@@ -10,8 +10,6 @@ import {
     Link
   } from 'react-router-dom';
 
-import '../Styles/HomePage.scss';
-
 import LoginPage from './LoginPage';
 import HomePage from './HomePage';
 import Dashboard from './Dashboard';
@@ -38,6 +36,7 @@ import AdminPage from './AdminPage'
 import Applicationstatus from './Applicationstatus'
 import ChangePass from './ChangePass'
 import AccountNumber from './AccountNumber'
+import NavBar from './NavBar';
 
 import sbilogo from '../Assets/sbilogo.png';
 import cntLogo from '../Assets/contactlogo.png';
@@ -83,4 +82,5 @@ export{
     Applicationstatus,
     ChangePass,
     AccountNumber,
+    NavBar,
 }
