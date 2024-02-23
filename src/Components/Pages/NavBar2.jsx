@@ -1,14 +1,12 @@
 import * as Import from './Imports';
 import '../Styles/NavBar.scss';
 
-function NavBar() {
+function NavBar2() {
 
     const menuItems = [
-        { name: 'Services', link: '/home', subMenu: ['Personal Banking'], order: 1 },
-        { name: 'FAQs', link: '/faqs', order: 2 },
-        { name: 'Apply for SBI Account', link: '/createAccount', subMenu: ['Savings Bank Account'], order: 3 },
-        { name: 'Apply Credit/Debit card E-Mandate', link: '#ApplyForServices', order: 4 },
-        { name: 'Apply for Loans', link: '#ApplyForServices', order: 5 },
+        { name: 'Home', link: '/home', order: 1 },
+        { name: 'How do I', link: '/howDoI', order: 2 },
+        { name: 'Contact Us', link: '/contactUs', order: 3 },
     ];
 
     return (
@@ -73,4 +71,4 @@ function NavBar() {
     )
 }
 
-export default NavBar
+export default NavBar2

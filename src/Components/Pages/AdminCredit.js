@@ -1,25 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import '../Styles/transactionStyle.css'
-
-import sbilogo from '../Assets/sbilogo.png';
-import styles from '../Styles/contactUs.module.css';
-
-
-import { Link, useNavigate } from 'react-router-dom';
+import * as Import from './Imports';
 
 function AdminCredit() {
-    const [posts, setPost] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [creditcardId, setCreditcardId] = useState()
+    const [posts, setPost] = Import.useState([])
+    const [loading, setLoading] = Import.useState(true)
+    const [creditcardId, setCreditcardId] = Import.useState()
 
+    Import.useEffect(() => {
 
-
-
-
-    useEffect(() => {
-
-        axios.get(`http://localhost:8084/getApplycredit`)
+        Import.axios.get(`http://localhost:8084/getApplycredit`)
 
             .then(res => {
                 console.log(res.data)
@@ -41,7 +29,7 @@ function AdminCredit() {
         e.preventDefault();
         let isApprovedNow = 1;
 
-        axios.put(`http://localhost:8084/updateCreditCard/${creditcardId}`,
+        Import.axios.put(`http://localhost:8084/updateCreditCard/${creditcardId}`,
             {
                 isApprovedNow
 
@@ -55,7 +43,7 @@ function AdminCredit() {
         e.preventDefault();
         let isApprovedNow = 2;
 
-        axios.put(`http://localhost:8084/updateCreditCard/${creditcardId}`,
+        Import.axios.put(`http://localhost:8084/updateCreditCard/${creditcardId}`,
             {
                 isApprovedNow
 
@@ -86,16 +74,16 @@ function AdminCredit() {
     return (
 
         <div style={mainDiv}>
-            <div style={header} ><img src={sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
+            <div style={header} ><img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
             <br />
             <div style={navBar} >
 
-                <div className={styles.navbar}>
+                <div className="navbar">
 
-                    <Link to="/adminPage" >Back</Link>
+                    <Import.Link to="/adminPage" >Back</Import.Link>
 
                 </div>
-                <div className={styles.mainBox}>
+                <div className="mainBox">
 
                     <div>
 
@@ -145,10 +133,10 @@ function AdminCredit() {
 
                 </div>
 
-                <form className={styles.adminFormStyle} >
-                    <input type="text" placeholder="Enter Credit Card ID to Approve" value={creditcardId} className={styles.adminInputStyle} onChange={(e) => setCreditcardId(e.target.value)} />
-                    <button className={styles.adminBTNStyle} onClick={handleApproval}>Approve</button>
-                    <button className={styles.adminBTNStyle} onClick={handleDeny}>Deny</button>
+                <form className="adminFormStyle" >
+                    <input type="text" placeholder="Enter Credit Card ID to Approve" value={creditcardId} className="adminInputStyle" onChange={(e) => setCreditcardId(e.target.value)} />
+                    <button className="adminBTNStyle" onClick={handleApproval}>Approve</button>
+                    <button className="adminBTNStyle" onClick={handleDeny}>Deny</button>
 
                 </form>
 

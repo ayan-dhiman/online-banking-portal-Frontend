@@ -1,8 +1,4 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route, Link, useNavigate, Navigate, useLocation } from 'react-router-dom'
-import axios from 'axios';
-import styles from '../Styles/contactUs.module.css'
-import sbilogo from '../Assets/sbilogo.png';
+import * as Import from './Imports';
 
 function Eligibility() {
 
@@ -24,28 +20,28 @@ function Eligibility() {
     marginTop: "1.5%"
   }
 
-  const location = useLocation();
+  const location = Import.useLocation();
 
   const accNumber = location.state;
 
   return (
 
     <div style={mainDiv}>
-      <div style={header} ><img src={sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
+      <div style={header} ><img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
       <br />
       <div style={navBar} >
 
-        <div className={styles.navbar}>
+        <div className="navbar">
 
-          <Link to="/dashboard" state={accNumber} >Back</Link>
+          <Import.Link to="/dashboard" state={accNumber} >Back</Import.Link>
 
         </div>
-        <div className={styles.mainBox}>
+        <div className="mainBox">
 
           <div>
             <h2>Eligibility criteria</h2>
             <br />
-            <div className={styles.div1}>
+            <div className="div1">
               <h3>For Loan:</h3>
               <p>You may be eligible for loan if you meet the following eligibility conditions:<br></br>
                 1. Age: Minimum 21 years and maximum 65 years.<br/>
@@ -54,7 +50,7 @@ function Eligibility() {
                 4. Work Experience: We usually prefer a work experience with the current employer to be at least 1-3 years.<br/>
                 5. Credit score - 700 & above</p>
             </div>
-            <div className={styles.div2}>
+            <div className="div2">
               <h3>For Credit Card:</h3>
               <p>1. Age: Although, a few banks have a base necessity of 21 years. The Majority of the banks have an age limit of 18 or above for applying for a credit card. The upper limit may vary and usually is 60 years for most of the banks.
                 <br />
@@ -64,7 +60,7 @@ function Eligibility() {
 
               </p>
             </div>
-            <div className={styles.div3}>
+            <div className="div3">
               <h3>For Debit Card:</h3>
               <p>1. You must have an account with a bank. It can be a savings account or a current account
                 <br />

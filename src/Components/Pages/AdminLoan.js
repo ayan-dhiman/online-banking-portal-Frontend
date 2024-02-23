@@ -1,25 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import '../Styles/transactionStyle.css'
-
-import sbilogo from '../Assets/sbilogo.png';
-import styles from '../Styles/contactUs.module.css';
-
-
-import { Link, useNavigate } from 'react-router-dom';
+import * as Import from './Imports';
 
 function AdminLoan() {
 
 
 
-    const [posts, setPost] = useState([])
+    const [posts, setPost] = Import.useState([])
 
-    const [loading, setLoading] = useState(true)
-    const [loanId, setloanId] = useState()
+    const [loading, setLoading] = Import.useState(true)
+    const [loanId, setloanId] = Import.useState()
 
-    useEffect(() => {
+    Import.useEffect(() => {
 
-        axios.get(`http://localhost:8084/getCustomersAll`)
+        Import.axios.get(`http://localhost:8084/getCustomersAll`)
 
             .then(res => {
                 console.log(res.data)
@@ -40,7 +32,7 @@ function AdminLoan() {
         e.preventDefault();
         let isApprovedNow = 1;
 
-        axios.put(`http://localhost:8084/updateCustomerLoan/${loanId}`,
+        Import.axios.put(`http://localhost:8084/updateCustomerLoan/${loanId}`,
             {
                 isApprovedNow
 
@@ -53,7 +45,7 @@ function AdminLoan() {
         e.preventDefault();
         let isApprovedNow = 2;
 
-        axios.put(`http://localhost:8084/updateCustomerLoan/${loanId}`,
+        Import.axios.put(`http://localhost:8084/updateCustomerLoan/${loanId}`,
             {
                 isApprovedNow
 
@@ -83,16 +75,16 @@ function AdminLoan() {
     return (
 
         <div style={mainDiv}>
-            <div style={header} ><img src={sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
+            <div style={header} ><img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
             <br />
             <div style={navBar} >
 
-                <div className={styles.navbar}>
+                <div className="navbar">
 
-                    <Link to="/adminPage" >Back</Link>
+                    <Import.Link to="/adminPage" >Back</Import.Link>
 
                 </div>
-                <div className={styles.mainBox}>
+                <div className="mainBox">
 
                     <div>
 
@@ -149,10 +141,10 @@ function AdminLoan() {
                     </div>
                 </div>
 
-                <form className={styles.adminFormStyle} >
-                    <input type="text" placeholder="Enter Loan ID to Approve"  className={styles.adminInputStyle}  value={loanId} onChange={(e) => setloanId(e.target.value)} />
-                    <button  className={styles.adminBTNStyle}  onClick={handleApproval}>Approve</button>
-                    <button className={styles.adminBTNStyle} onClick={handleDeny}>Deny</button>
+                <form className="adminFormStyle" >
+                    <input type="text" placeholder="Enter Loan ID to Approve"  className="adminInputStyle"  value={loanId} onChange={(e) => setloanId(e.target.value)} />
+                    <button  className="adminBTNStyle"  onClick={handleApproval}>Approve</button>
+                    <button className="adminBTNStyle" onClick={handleDeny}>Deny</button>
 
                 </form>
 

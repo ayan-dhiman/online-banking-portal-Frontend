@@ -105,7 +105,7 @@ function HomePage() {
                     <p>By clicking on <strong> "Continue to Login" </strong> button, you agree to the Terms of Service (Terms & Conditions) of usage of Internet Banking of SBI.</p>
                     <a className="close" href="#">&times;</a>
                     <br />
-                    <Import.Link to="/login" ><button className="loginBTN" >Continue to Login</button></Import.Link>
+                    <Import.Link to="/login" ><button className="loginBTN" >CONTINUE TO LOGIN</button></Import.Link>
                 </div>
             </div>
 

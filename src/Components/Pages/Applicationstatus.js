@@ -1,27 +1,20 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router'
-import { Link, useNavigate } from 'react-router-dom';
-
-
-import sbilogo from '../Assets/sbilogo.png';
-import styles from '../Styles/contactUs.module.css';
+import * as Import from './Imports';
 
 function Applicationstatus() {
 
-    const loc = useLocation()
+    const loc = Import.useLocation()
     const accountno = loc.state;
 
-    const [creditRequest, setCreditRequest] = useState([])
+    const [creditRequest, setCreditRequest] = Import.useState([])
 
-    const [loanRequest, setLoanRequest] = useState([])
+    const [loanRequest, setLoanRequest] = Import.useState([])
 
-    const [debitRequest, setDebitRequest] = useState([])
+    const [debitRequest, setDebitRequest] = Import.useState([])
 
 
-    useEffect(() => {
+    Import.useEffect(() => {
 
-        axios.get(`http://localhost:8084/getAllCreditRequest/${accountno}`)
+        Import.axios.get(`http://localhost:8084/getAllCreditRequest/${accountno}`)
 
             .then(res => {
                 console.log(res.data)
@@ -34,9 +27,9 @@ function Applicationstatus() {
             })
     }, [])
 
-    useEffect(() => {
+    Import.useEffect(() => {
 
-        axios.get(`http://localhost:8084/getAllDebitRequest/${accountno}`)
+        Import.axios.get(`http://localhost:8084/getAllDebitRequest/${accountno}`)
 
             .then(res => {
                 console.log(res.data)
@@ -49,9 +42,9 @@ function Applicationstatus() {
             })
     }, [])
 
-    useEffect(() => {
+    Import.useEffect(() => {
 
-        axios.get(`http://localhost:8084/getAllLoanRequest/${accountno}`)
+        Import.axios.get(`http://localhost:8084/getAllLoanRequest/${accountno}`)
 
             .then(res => {
                 console.log(res.data)
@@ -82,23 +75,23 @@ function Applicationstatus() {
         marginTop: "1.5%"
     }
 
-    const location = useLocation();
+    const location = Import.useLocation();
 
     const accNumber = location.state;
 
     return (
 
         <div style={mainDiv}>
-            <div style={header} ><img src={sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
+            <div style={header} ><img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
             <br />
             <div style={navBar} >
 
-                <div className={styles.navbar}>
+                <div className="navbar">
 
-                    <Link to="/dashboard" state={accNumber} >Back</Link>
+                    <Import.Link to="/dashboard" state={accNumber} >Back</Import.Link>
 
                 </div>
-                <div className={styles.mainBox}>
+                <div className="mainBox">
 
                     <div>
                         <h2>Credit Card Requests</h2>

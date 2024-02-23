@@ -1,28 +1,21 @@
-import axios from 'axios';
-
-import sbilogo from '../Assets/sbilogo.png';
-import React, { useEffect, useState } from 'react'
-import { Navigate, useLocation, useNavigate } from 'react-router';
-import '../Styles/sendMoneyStyle.css'
-import styles from '../Styles/contactUs.module.css';
-import { Link } from 'react-router-dom';
+import * as Import from './Imports';
 
 function SendMoney() {
 
-    const location = useLocation();
-    const [amount, setAmount] = useState();
-    const [from_acc_no, setFromAccNo] = useState(location.state);
-    const [to_acc_no, setToAccNo] = useState();
-    const [password, setPassword] = useState("");
-    const [transactionPasswd, setTransactionPasswd] = useState("");
-    const [balance,setBalance]=useState();
+    const location = Import.useLocation();
+    const [amount, setAmount] = Import.useState();
+    const [from_acc_no, setFromAccNo] = Import.useState(location.state);
+    const [to_acc_no, setToAccNo] = Import.useState();
+    const [password, setPassword] = Import.useState("");
+    const [transactionPasswd, setTransactionPasswd] = Import.useState("");
+    const [balance,setBalance]=Import.useState();
 
 
-    const navigate = useNavigate();
+    const navigate = Import.useNavigate();
 
 //To get transaction password
-    useEffect(() => {
-        axios.get
+Import.useEffect(() => {
+    Import.axios.get
             (`http://localhost:8084/getUserPassword/${from_acc_no}`)
             .then(res => {
 
@@ -34,8 +27,8 @@ function SendMoney() {
             })
     }, [])
 //For getting user balance
-    useEffect(() => {
-        axios.get
+    Import.useEffect(() => {
+        Import.axios.get
             (`http://localhost:8084/getUserBalance/${from_acc_no}`)
             .then(res => {
 
@@ -76,7 +69,7 @@ function SendMoney() {
         console.log(password);
         console.log(transactionPasswd);
         if (flag) {
-            axios.post(`http://localhost:8084/saveTransaction`,{
+            Import.axios.post(`http://localhost:8084/saveTransaction`,{
             amount,
             from_acc_no,
             to_acc_no
@@ -110,18 +103,18 @@ function SendMoney() {
 
     return (
         <div style={mainDiv}>
-            <div style={header} ><img src={sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
+            <div style={header} ><img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
             <br />
             <div style={navBar} >
 
-                <div className={styles.navbar}>
+                <div className="navbar">
 
-                    <Link to="/dashboard" state={from_acc_no} >Dashboard</Link>
-                    <Link to="" ></Link>
-                    <Link to="" ></Link>
+                    <Import.Link to="/dashboard" state={from_acc_no} >Dashboard</Import.Link>
+                    <Import.Link to="" ></Import.Link>
+                    <Import.Link to="" ></Import.Link>
 
                 </div>
-                <div className={styles.mainBox}>
+                <div className="mainBox">
 
                     <div id="formDiv">
 

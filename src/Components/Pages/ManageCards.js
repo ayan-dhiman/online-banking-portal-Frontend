@@ -1,8 +1,4 @@
-import React from 'react'
-import sbilogo from '../Assets/sbilogo.png';
-import styles from '../Styles/contactUs.module.css';
-
-import { Link, useNavigate } from 'react-router-dom';
+import * as Import from './Imports';
 
 function ManageCards() {
 
@@ -26,16 +22,16 @@ function ManageCards() {
 
     return (
         <div style={mainDiv} >
-            <div style={header} ><img src={sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
+            <div style={header} ><img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
             <br />
             <div style={navBar} >
 
-                <div className={styles.navbar}>
+                <div className="navbar">
 
-                    <Link to="/home" >Home</Link>
-                    <Link to="/howDoI" >How do I</Link>
-                    <Link to="/manageCards" >Manage Credit/Debit card E-Mandate</Link>
-                    <Link to="/contactUs" >Contact Us</Link>
+                    <Import.Link to="/home" >Home</Import.Link>
+                    <Import.Link to="/howDoI" >How do I</Import.Link>
+                    <Import.Link to="/manageCards" >Manage Credit/Debit card E-Mandate</Import.Link>
+                    <Import.Link to="/contactUs" >Contact Us</Import.Link>
                 </div>
             </div>
         </div>

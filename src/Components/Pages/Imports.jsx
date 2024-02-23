@@ -37,6 +37,7 @@ import Applicationstatus from './Applicationstatus'
 import ChangePass from './ChangePass'
 import AccountNumber from './AccountNumber'
 import NavBar from './NavBar';
+import NavBar2 from './NavBar2';
 
 import sbilogo from '../Assets/sbilogo.png';
 import cntLogo from '../Assets/contactlogo.png';
@@ -51,6 +52,7 @@ export{
     cntLogo,
     axios,
     Link,
+    useNavigate,
     useLocation,
     BrowserRouter,
     Routes,
@@ -83,4 +85,5 @@ export{
     ChangePass,
     AccountNumber,
     NavBar,
+    NavBar2,
 }

@@ -1,10 +1,4 @@
-// -------------------------------------ADMIN PAGE-----------------------------------------------------------
-import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link, useNavigate, Navigate } from 'react-router-dom'
-import axios from 'axios'
-
-import sbilogo from '../Assets/sbilogo.png';
-import styles from '../Styles/contactUs.module.css';
+import * as Import from './Imports';
 
 function AdminPage() {
 
@@ -31,25 +25,25 @@ function AdminPage() {
   return (
 
     <div style={mainDiv}>
-      <div style={header} ><img src={sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
+      <div style={header} ><img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /></div>
       <br />
       <div style={navBar} >
 
-        <div className={styles.navbar}>
+        <div className="navbar">
 
-          <Link to="/home" >Home</Link>
+          <Import.Link to="/home" >Home</Import.Link>
 
         </div>
-        <div className={styles.mainBox}>
+        <div className="mainBox">
 
           <div>
             <h2 style={{ textAlign: "center" }}> ADMIN PORTAL </h2>
 
-            <Link to="/AdminLoan"><button style={ButtonStyle}> Check Loan Request</button></Link>
+            <Import.Link to="/AdminLoan"><button style={ButtonStyle}> Check Loan Request</button></Import.Link>
 
-            <Link to="/AdminCredit"><button style={ButtonStyle}> Check Credit Card Application</button></Link>
+            <Import.Link to="/AdminCredit"><button style={ButtonStyle}> Check Credit Card Application</button></Import.Link>
 
-            <Link to="/AdminDebit"><button style={ButtonStyle}> Check Debit Card Application</button></Link>
+            <Import.Link to="/AdminDebit"><button style={ButtonStyle}> Check Debit Card Application</button></Import.Link>
 
           </div>
         </div>
