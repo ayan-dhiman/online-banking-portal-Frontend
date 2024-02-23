@@ -1,98 +1,71 @@
-import './App.css';
-import LoginPage from './Components/WebPages/LoginPage';
-import HomePage from './Components/WebPages/HomePage';
-import { BrowserRouter as Router,Routes,Route,Link,BrowserRouter } from 'react-router-dom';
-import Dashboard from './Components/WebPages/Dashboard';
-import HowDoIPage from './Components/WebPages/HowDoIPage';
-import ManageCards from './Components/WebPages/ManageCards';
-import ContactUs from './Components/WebPages/ContactUs';
-import CreateAccountPage from './Components/WebPages/CreateAccountPage'
-import Profile from './Components/WebPages/Profile';
-import ChangePassword from './Components/WebPages/ChangePassword';
-import FAQsPage from './Components/WebPages/FAQsPage';
-import Transactions from './Components/WebPages/Transactions';
-import SetTransactionPassword from './Components/WebPages/SetTransactionPassword';
-import SendMoney from './Components/WebPages/SendMoney';
-import LoanForm from './Components/WebPages/LoanForm';
-import Eligibility from './Components/WebPages/Eligibility';
-import ApplyNow from './Components/WebPages/ApplyNow';
-import CardsApply from './Components/WebPages/CardsApply'
-import CreditCard from './Components/WebPages/CreditCard'
-import DebitCard from './Components/WebPages/DebitCard'
-import AdminCredit from './Components/WebPages/AdminCredit'
-import AdminDebit from './Components/WebPages/AdminDebit'
-import AdminLoan from './Components/WebPages/AdminLoan'
-import AdminPage from './Components/WebPages/AdminPage'
-import Applicationstatus from './Components/WebPages/Applicationstatus'
-import ChangePass from './Components/WebPages/ChangePass'
-import AccountNumber from './Components/WebPages/AccountNumber'
+import * as Import from '../src/Components/Pages/Imports';
 
 function App() {
   return (
     
-      <BrowserRouter>
+      <Import.BrowserRouter>
 
-      <Routes>
+      <Import.Routes>
 
-        <Route exact path="/" element={<HomePage/>}/>
+        <Import.Route exact path="/" element={<Import.HomePage/>}/>
         
-        <Route path="/home" element={<HomePage/>}/>
+        <Import.Route path="/home" element={<Import.HomePage/>}/>
         
-        <Route path="/login" element={<LoginPage/>}/>
+        <Import.Route path="/login" element={<Import.LoginPage/>}/>
 
-        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Import.Route path="/dashboard" element={<Import.Dashboard/>}/>
 
-        <Route path="/howDoI" element={<HowDoIPage/>}/>
+        <Import.Route path="/howDoI" element={<Import.HowDoIPage/>}/>
 
-        <Route path="/manageCards" element={<ManageCards/>}/>
+        <Import.Route path="/manageCards" element={<Import.ManageCards/>}/>
 
-        <Route path="/contactUs" element={<ContactUs/>}/>
+        <Import.Route path="/contactUs" element={<Import.ContactUs/>}/>
 
-        <Route path="/accountNumber" element={<AccountNumber/>}/>
+        <Import.Route path="/accountNumber" element={<Import.AccountNumber/>}/>
 
-        <Route path="/createAccount" element={<CreateAccountPage/>}/>
+        <Import.Route path="/createAccount" element={<Import.CreateAccountPage/>}/>
 
-        <Route path="/profile" element={<Profile/>}/>
+        <Import.Route path="/profile" element={<Import.Profile/>}/>
 
-        <Route path="/changePassword" element={<ChangePassword/>}/>
+        <Import.Route path="/changePassword" element={<Import.ChangePassword/>}/>
 
-        <Route path="/changePass" element={<ChangePass/>}/>
+        <Import.Route path="/changePass" element={<Import.ChangePass/>}/>
 
-        <Route path="/faqs" element={<FAQsPage/>}/>
+        <Import.Route path="/faqs" element={<Import.FAQsPage/>}/>
 
-        <Route path="/pay" element={<SendMoney/>}/>
+        <Import.Route path="/pay" element={<Import.SendMoney/>}/>
 
-        <Route path="/setTransactionPassword" element={<SetTransactionPassword/>}/>
+        <Import.Route path="/setTransactionPassword" element={<Import.SetTransactionPassword/>}/>
 
-        <Route path="/transactions" element={<Transactions/>}/>
+        <Import.Route path="/transactions" element={<Import.Transactions/>}/>
 
-        <Route path="/loanForm" element={<LoanForm/>}/>
+        <Import.Route path="/loanForm" element={<Import.LoanForm/>}/>
 
-        <Route path="/eligibility" element={<Eligibility/>}/>
+        <Import.Route path="/eligibility" element={<Import.Eligibility/>}/>
 
-        <Route path="/loanApply" element={<ApplyNow/>}/>
+        <Import.Route path="/loanApply" element={<Import.ApplyNow/>}/>
 
-        <Route path="/cardsApply" element={<CardsApply/>}/>
+        <Import.Route path="/cardsApply" element={<Import.CardsApply/>}/>
 
-        <Route path="/loanForm" element={<LoanForm/>}/>
+        <Import.Route path="/loanForm" element={<Import.LoanForm/>}/>
 
-        <Route path="/creditCard" element={<CreditCard/>}/>
+        <Import.Route path="/creditCard" element={<Import.CreditCard/>}/>
 
-        <Route path="/debitCard" element={<DebitCard/>}/>
+        <Import.Route path="/debitCard" element={<Import.DebitCard/>}/>
 
-        <Route path="/adminCredit" element={<AdminCredit/>}/>
+        <Import.Route path="/adminCredit" element={<Import.AdminCredit/>}/>
 
-        <Route path="/adminDebit" element={<AdminDebit/>}/>
+        <Import.Route path="/adminDebit" element={<Import.AdminDebit/>}/>
 
-        <Route path="/adminLoan" element={<AdminLoan/>}/>
+        <Import.Route path="/adminLoan" element={<Import.AdminLoan/>}/>
 
-        <Route path="/adminPage" element={<AdminPage/>}/>
+        <Import.Route path="/adminPage" element={<Import.AdminPage/>}/>
 
-        <Route path="/ApplicationStatus" element={<Applicationstatus/>}/>
+        <Import.Route path="/ApplicationStatus" element={<Import.Applicationstatus/>}/>
         
-      </Routes>
+      </Import.Routes>
 
-    </BrowserRouter>
+    </Import.BrowserRouter>
 
 
   );
