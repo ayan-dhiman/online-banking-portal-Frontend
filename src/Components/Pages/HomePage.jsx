@@ -1,21 +1,25 @@
 import * as Import from './Imports';
 import '../Styles/HomePage.scss';
 import Button from '@mui/material/Button';
+import PersonIcon from '@mui/icons-material/Person';
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
+import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
 
 function HomePage() {
 
     const securityMessages = {
         homepageHeadAlert: [
             'If slowness is observed during Login Page loading, please refresh the page for better experience.',
-            'SBI never asks for confidential information such as PIN and OTP from the customers. Any such call can be made only by a fraudster. Please do not share personal info.'
+            'OBP never asks for confidential information such as PIN and OTP from the customers. Any such call can be made only by a fraudster. Please do not share personal info.'
         ],
     };
 
     const infoMessages = [
         'Mandatory Profile password change after 365 days introduced for added security.',
-        'SBI never asks for your Card/PIN/OTP/CVV details on phone, message or email. Please do not click on links received on your email or mobile asking your Bank/Card details.',
-        'Customers who have installed “SBI Secure OTP App” on their mobile and completed the registration process will now receive Login OTP for OnlineSBI.com on the app instead of SMS OTP.',
-        'Call us toll free on 1800 1234 and 1800 2100 and get a wide range of services through SBI Contact Centre.'
+        'OBP never asks for your Card/PIN/OTP/CVV details on phone, message or email. Please do not click on links received on your email or mobile asking your Bank/Card details.',
+        'Customers who have installed “OBP Secure OTP App” on their mobile and completed the registration process will now receive Login OTP for Online on the app instead of SMS OTP.',
+        'Call us toll free on 1800 1234 and 1800 2100 and get a wide range of services through OBP Contact Centre.'
     ];
 
     const footerLinks = [
@@ -55,9 +59,8 @@ function HomePage() {
             {/* Main Login Box */}
             <div className="loginBox">
 
-                <img src={Import.cntLogo} alt="Logo" width={"5%"} height={"3%"} />
-
-                <br />
+                {/* <img src={Import.cntLogo} alt="Logo" width={"5%"} height={"3%"} /> */}
+                <PersonIcon className='icon'/>
 
                 <h3 className="bankingName" >PERSONAL BANKING</h3>
 
@@ -66,13 +69,11 @@ function HomePage() {
                     <a href="#login"><Button variant="contained" className="loginBTN">LOGIN</Button></a>
                 </div>
 
-                <br /> <br />
+                <br/>
 
-                <div className="inlineLink" ><a href='#NewUser' >New User Registration</a> / <Import.Link to="/howDoI" >How do I ?</Import.Link> / <Import.Link to="/contactUs" >Contact Us</Import.Link> </div>
+                <div className="inlineLink" ><a href='#NewUser' ><AccountCircleRoundedIcon className='iconInline' />New User Registration</a> / <Import.Link to="/howDoI" ><HelpRoundedIcon className='iconInline' />How do I ?</Import.Link> / <Import.Link to="/contactUs" ><SupportAgentRoundedIcon className='iconInline' />Contact Us</Import.Link> </div>
 
-                <br />
-
-                <p>SBI's internet banking portal provides personal banking services that gives you complete control over all your banking demands online.</p>
+                <p>OBP's internet banking portal provides personal banking services that gives you complete control over all your banking demands online.</p>
 
             </div>
 
@@ -89,6 +90,7 @@ function HomePage() {
 
             {/* Footer Links */}
             <div className='footer'>
+                <br/>
                 <table className="footerLink">
                     {footerLinks.map((link, index) => (
                         <tr key={index}>
@@ -98,11 +100,12 @@ function HomePage() {
                         </tr>
                     ))}
                 </table>
+                <br/>
             </div>
 
             {/* Footer Images */}
             <div className='footer'>
-                <img src={Import.banner1} alt="Logo" width={"100%"} height={"50%"} />
+                <img src={Import.banner5} alt="Logo" width={"100%"} height={"50%"} />
             </div>
 
             {/* Login Popup */}
