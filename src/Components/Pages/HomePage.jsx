@@ -1,5 +1,6 @@
 import * as Import from './Imports';
 import '../Styles/HomePage.scss';
+import Button from '@mui/material/Button';
 
 function HomePage() {
 
@@ -61,7 +62,8 @@ function HomePage() {
                 <h3 className="bankingName" >PERSONAL BANKING</h3>
 
                 <div className="box">
-                    <a href="#login"><button className="loginBTN" >LOGIN</button></a>
+                    {/* <a href="#login"><button className="loginBTN" >LOGIN</button></a> */}
+                    <a href="#login"><Button variant="contained" className="loginBTN">LOGIN</Button></a>
                 </div>
 
                 <br /> <br />
@@ -96,6 +98,11 @@ function HomePage() {
                         </tr>
                     ))}
                 </table>
+            </div>
+
+            {/* Footer Images */}
+            <div className='footer'>
+                <img src={Import.banner1} alt="Logo" width={"100%"} height={"50%"} />
             </div>
 
             {/* Login Popup */}

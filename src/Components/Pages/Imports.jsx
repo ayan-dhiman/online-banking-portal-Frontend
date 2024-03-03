@@ -42,7 +42,7 @@ import NavBar2 from './NavBar2';
 import sbilogo from '../Assets/sbilogo.png';
 import cntLogo from '../Assets/contactlogo.png';
 
-
+import banner1 from '../Assets/Images/banner1.jpg';
 
 export{
     React,
@@ -86,4 +86,5 @@ export{
     AccountNumber,
     NavBar,
     NavBar2,
+    banner1,
 }
