@@ -1,5 +1,6 @@
 import * as Import from './Imports';
 import '../Styles/NavBar.scss';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 function NavBar() {
 
@@ -16,10 +17,9 @@ function NavBar() {
 
             {/* SBI LOGO ON THE TOP */}
             <div className="header">
-                <img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} />
+                {/* <img src={Import.sbilogo} align="left" alt="Logo" width={"9%"} height={"4%"} /> */}
+                <AccountBalanceWalletIcon/><h1>Fundwise</h1>
             </div>
-
-            <br />
 
             {/* Navbar */}
             <div className='navbarParent'>

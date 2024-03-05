@@ -1,10 +1,10 @@
 .mainDiv {
 
-    width: 80%;
+    width: 80vw;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 0px;
-
+    min-height: 100vh;
     background-color: white;
     box-shadow: -8px 0 8px rgba(0, 0, 0, 0.1), 8px 0 8px rgba(0, 0, 0, 0.1);
 
@@ -18,9 +18,7 @@
 
             margin: 1%;
             text-align: center;
-            color: #5d72ec;
-            
-
+            color: #000000;
         }
 
     }
@@ -38,14 +36,14 @@
         .icon{
             width: 5%;
             height: 3%;
-            color: #0c376a;
+            color: #000000;
         }
 
         .bankingName {
 
             font-weight: normal;
             font-size: 25px;
-            color: #266fa0;
+            color: #000000;
 
         }
 
@@ -55,7 +53,7 @@
 
             .loginBTN {
 
-                background-color: #0c376a;
+                background-color: #000000;
                 color: white;
                 width: 10%;
                 height: 30px;
@@ -75,7 +73,7 @@
 
             a {
                 text-decoration: none;
-                color: #0c376a;
+                color: #000000;
                 margin: 2%;
                 display: flex;
                 flex-direction: row;
@@ -85,21 +83,21 @@
             }
 
             .iconInline{
-                color: #0c376a;
+                color: #000000;
             }
 
         }
 
         p{
-            color: #0c376a; 
+            color: #000000; 
         }
 
     }
 
     .infoScroll {
 
-        background-color: #cbeffb;
-        color: red;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
         height: 21px;
         font-size: 13px;
         padding-top: 6px;
@@ -110,7 +108,7 @@
       
         a {
           text-decoration: none;
-          color: #266fa0;
+          color: #000000;
         }
       
         .footerLink {

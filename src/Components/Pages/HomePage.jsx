@@ -11,15 +11,14 @@ function HomePage() {
     const securityMessages = {
         homepageHeadAlert: [
             'If slowness is observed during Login Page loading, please refresh the page for better experience.',
-            'OBP never asks for confidential information such as PIN and OTP from the customers. Any such call can be made only by a fraudster. Please do not share personal info.'
+            'FUNDWISE never asks for confidential information such as PIN and OTP from the customers. Any such call can be made only by a fraudster. Please do not share personal info.'
         ],
     };
 
     const infoMessages = [
         'Mandatory Profile password change after 365 days introduced for added security.',
-        'OBP never asks for your Card/PIN/OTP/CVV details on phone, message or email. Please do not click on links received on your email or mobile asking your Bank/Card details.',
-        'Customers who have installed “OBP Secure OTP App” on their mobile and completed the registration process will now receive Login OTP for Online on the app instead of SMS OTP.',
-        'Call us toll free on 1800 1234 and 1800 2100 and get a wide range of services through OBP Contact Centre.'
+        'FUNDWISE never asks for your Card/PIN/OTP/CVV details on phone, message or email. Please do not click on links received on your email or mobile asking your Bank/Card details.',
+        'Call us toll free on 1800 1234 and 1800 2100 and get a wide range of services through FUNDWISE Contact Centre.'
     ];
 
     const footerLinks = [
@@ -73,7 +72,7 @@ function HomePage() {
 
                 <div className="inlineLink" ><a href='#NewUser' ><AccountCircleRoundedIcon className='iconInline' />New User Registration</a> / <Import.Link to="/howDoI" ><HelpRoundedIcon className='iconInline' />How do I ?</Import.Link> / <Import.Link to="/contactUs" ><SupportAgentRoundedIcon className='iconInline' />Contact Us</Import.Link> </div>
 
-                <p>OBP's internet banking portal provides personal banking services that gives you complete control over all your banking demands online.</p>
+                <p>FUNDWISE's internet banking portal provides personal banking services that gives you complete control over all your banking demands online.</p>
 
             </div>
 
@@ -104,9 +103,9 @@ function HomePage() {
             </div>
 
             {/* Footer Images */}
-            <div className='footer'>
+            {/* <div className='footer'>
                 <img src={Import.banner5} alt="Logo" width={"100%"} height={"50%"} />
-            </div>
+            </div> */}
 
             {/* Login Popup */}
             <div id="login" className="overlay">
